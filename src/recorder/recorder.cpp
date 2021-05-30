@@ -61,6 +61,10 @@ void Recorder::openFile() {
     // Create pointer
     _file = new QFile(_fileName);
 
+    // Create path for logs
+    QDir directory;
+    directory.mkdir(PROJECT_PATH + QString("/logs/"));
+
     // Open file
     if(!_file->open(QIODevice::WriteOnly)) {
         std::cout << Text::cyan("[RECORDER] ", true) + Text::red("Error opening file '" + _fileName.toStdString() + "'", true) + '\n';

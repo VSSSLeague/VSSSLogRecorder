@@ -2,6 +2,7 @@
 #define RECORDER_H
 
 #include <QFile>
+#include <QDir>
 #include <QMutex>
 #include <QUdpSocket>
 #include <QDataStream>

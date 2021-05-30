@@ -41,9 +41,9 @@ int main(int argc, char *argv[]) {
 
     // Parse
     // File Name
-    QString logFileName = Timer::getActualTime() + ".log";
+    QString logFileName = PROJECT_PATH + QString("/logs/") + Timer::getActualTime() + ".log";
     if(parser.isSet(fileName)) {
-        logFileName = parser.value(fileName) + ".log";
+        logFileName = PROJECT_PATH + QString("/logs/") + parser.value(fileName) + ".log";
     }
 
     // Vision
